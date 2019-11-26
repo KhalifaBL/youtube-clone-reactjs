@@ -1,0 +1,22 @@
+.right-side-list{
+    width: 400px;
+}
+.left-icon{
+    float: left;
+    height: 100%;
+
+    width: 30%;
+}
+.right-title{
+
+    height: 100%;
+    width: 55%;
+    float: right;
+    text-align: left;
+    margin-left: 0px;
+}
+.channel-title{
+    color:rgb(150, 149, 149);
+    font-size: small;
+    margin-top: 5px;
+}

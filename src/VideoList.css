@@ -20,3 +20,6 @@
     font-size: small;
     margin-top: 5px;
 }
+.item:hover{
+    cursor: pointer;
+}

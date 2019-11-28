@@ -1,16 +1,15 @@
 import React from 'react';
 import './VideoList.css';
 
-const VideoItem = ({ video }) => {
+const VideoItem = ({ video, onVideoSelect }) => {
     const styleVideo = {
         width: '176'
     }
     return (
-        <div className="item">
+        <div onClick={() => onVideoSelect(video)} className="item">
             <div className='left-icon'><img className='thumbnail' style={{ width: 175, height: 101 }} src={video.snippet.thumbnails.high.url}></img></div>
             <div className='right-title'>
                 <div className='title'>{video.snippet.title}</div>
-
                 <div className='channel-title'>{video.snippet.channelTitle}</div>
             </div>
         </div>);

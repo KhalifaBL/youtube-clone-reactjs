@@ -7,15 +7,27 @@ import './App.css';
 
 class App extends React.Component {
 
-  state = { videos: [] }
+  state = { videos: [], selectedVideo: null }
+  onVideoSelect = (video) => {
+    this.setState({ selectedVideo: video });
+
+  }
   onSearchSubmit = async (term) => {
     const response = await youtube.get('/search', {
       params: {
         q: term
       }
     });
-    this.setState({ videos: response.data.items });
+    const firstelement = response.data.items[0];
+    response.data.items.shift();
+    this.setState({
+      videos: response.data.items,
+      selectedVideo: firstelement
+    });
+  }
 
+  componentDidMount() {
+    this.onSearchSubmit('happy');
   }
   render() {
     return (
@@ -25,10 +37,10 @@ class App extends React.Component {
         <div className="body">
           <div className="main-body">
             <div className="left-part">
-              <VideoDetail videoList={this.state.videos}></VideoDetail>
+              <VideoDetail selectedVideo={this.state.selectedVideo}></VideoDetail>
             </div>
             <div className="right-part" >
-              <VideoList onSearchSubmit={this.onSearchSubmit} videoList={this.state.videos}></VideoList>
+              <VideoList onVideoSelect={this.onVideoSelect} videoList={this.state.videos}></VideoList>
 
             </div>
           </div>

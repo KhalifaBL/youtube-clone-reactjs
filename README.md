@@ -11,7 +11,6 @@ This react app will take in parameter a keyword then will fetch for youtube vide
 This is a list of all the used technologies in order to make this app.
 ```
 JSX | CSS | React JS | Github Pages | Semantic UI
-API: Youtube Data V3
 ```
 ### Visit the github pages at
 https://khalifabl.github.io/youtube-clone-reactjs/

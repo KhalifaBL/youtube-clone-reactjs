@@ -4,8 +4,8 @@ import './VideoDetail.css'
 
 const VideoDetail = ({ selectedVideo }) => {
     const opts = {
-        width: '1190px',
-        height: '670px',
+        width: '951px',
+        height: '535px',
         playerVars: {
             autoplay: 1
         }
@@ -67,7 +67,6 @@ const VideoDetail = ({ selectedVideo }) => {
         return <div> Loading ...</div>
     } else {
 
-        console.log(selectedVideo.id.videoId);
         return (
             <div>
                  <div className="vid-container">

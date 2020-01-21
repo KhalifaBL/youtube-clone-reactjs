@@ -29,7 +29,7 @@
     overflow: hidden;
     text-overflow: ellipsis; 
     height: 38px;
-    width: 250px;
+    width: 200px;
 }
 .item:hover{
     cursor: pointer;
@@ -37,7 +37,7 @@
 .separator{
     color:rgb(71, 71, 71);
     opacity: 0.4;
-    width: 490px;
+    width: 430px;
     margin-left: 0px;
     margin-top: 18px;
     margin-bottom: 18px;

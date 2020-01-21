@@ -1,6 +1,6 @@
 
 import axios from 'axios';
-const KEY = 'AIzaSyCU3XH34H94CdcILVbSCIDljAYdvVPY4vs';
+const KEY = process.env.REACT_APP_API_KEY;
 
 const instance = axios.create({
     baseURL: 'https://www.googleapis.com/youtube/v3',
@@ -13,6 +13,7 @@ instance.interceptors.request.use(config => {
         // add your default ones
         part: 'snippet',
         order:'relevance',
+        referer:'https://khalifabl.github.io/youtube-clone-reactjs/',
         maxResults: 12,
         key: KEY
     };

@@ -9,3 +9,5 @@ JSX | CSS | Semantic UI | ReactJS
 ```
 ### Visit the project gh-page at 
 https://khalifabl.github.io/youtube-clone-reactjs/
+
+© Khalifa Ben Lazrek.

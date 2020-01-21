@@ -1,6 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
-import Logo from './youtube.png'
+import Logo from './yout.png'
+import Lastelem from './last-elem.png'
 class SearchBar extends React.Component {
     state = { term: '' }
 
@@ -12,14 +13,17 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className="container ui search">
+            <div className="container">
                 <div className="child1">
-                    <img alt="youtube-logo" src={Logo} width="70px" ></img>
+                    <img alt="youtube-logo" src={Logo} height="32px" ></img>
                 </div>
                 <form className="child2 ui icon input" onSubmit={this.onFormSubmit}>
-                    <input className="prompt" value={this.state.term} onChange={(e) => { this.setState({ term: e.target.value }); }} type="text" placeholder="Search on Youtube..." />
+                    <input  value={this.state.term} onChange={(e) => { this.setState({ term: e.target.value }); }} type="text" placeholder="Rechercher" />
                     <i className="search icon"></i>
                 </form>
+                <div className="child3">
+                    <img alt="youtube-logo" src={Lastelem} height="42px" ></img>
+                </div>
             </div>
         )
     }

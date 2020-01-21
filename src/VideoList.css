@@ -1,25 +1,48 @@
+.item{
+    margin-bottom: 5px;
+    display: flex;
+    width: 470px;
+}
 .right-side-list{
     width: 400px;
 }
 .left-icon{
-    float: left;
     height: 100%;
-
-    width: 30%;
+    width: min-content;
 }
 .right-title{
-
     height: 100%;
-    width: 55%;
-    float: right;
-    text-align: left;
-    margin-left: 0px;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: 600;
 }
+
 .channel-title{
-    color:rgb(150, 149, 149);
-    font-size: small;
-    margin-top: 5px;
+    color:rgb(105, 105, 105);
+    font-size: 15.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    margin-top: 8px;
+}
+.mytitle{
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    height: 38px;
+    width: 250px;
 }
 .item:hover{
     cursor: pointer;
+}
+.separator{
+    color:rgb(71, 71, 71);
+    opacity: 0.4;
+    width: 490px;
+    margin-left: 0px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+.header-of-list{
+    font-size: 20px;
+    margin-bottom: 25px;
 }

@@ -10,14 +10,14 @@ class App extends React.Component {
   state = { videos: [], selectedVideo: null }
   onVideoSelect = (video) => {
     this.setState({ selectedVideo: video });
-
   }
-  onSearchSubmit = async (term) => {
+  onSearchSubmit = async  (term) => {
     const response = await youtube.get('/search', {
       params: {
         q: term
       }
     });
+    
     const firstelement = response.data.items[0];
     response.data.items.shift();
     this.setState({
@@ -27,7 +27,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.onSearchSubmit('happy');
+    this.onSearchSubmit('wiz boys');
   }
   render() {
     return (

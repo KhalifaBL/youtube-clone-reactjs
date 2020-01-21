@@ -12,7 +12,8 @@ instance.interceptors.request.use(config => {
         ...config.params,
         // add your default ones
         part: 'snippet',
-        maxResults: 6,
+        order:'relevance',
+        maxResults: 12,
         key: KEY
     };
     return config;

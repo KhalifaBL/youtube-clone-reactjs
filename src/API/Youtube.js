@@ -13,7 +13,7 @@ instance.interceptors.request.use(config => {
         // add your default ones
         part: 'snippet',
         order:'relevance',
-        referer:'https://khalifabl.github.io/youtube-clone-reactjs/',
+        headers: {referer: 'https://khalifabl.github.io/youtube-clone-reactjs/'},
         maxResults: 12,
         key: KEY
     };
